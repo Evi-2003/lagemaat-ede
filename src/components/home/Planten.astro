@@ -1,0 +1,126 @@
+---
+import { imageConfig } from 'astro:assets';
+import SliderPlanten from '../SliderPlanten';
+const services = [
+  {
+    step: '01',
+    name: 'Kamerplanten',
+    image: '/planten/plant-5.webp',
+    description:
+      'Wij bieden een ruim assortiment kamerplanten en diverse soorten speciale potgrond met extra voedingsstoffen.',
+  },
+  {
+    step: '02',
+    name: 'Tuinplanten',
+    image: '/onze-planten/tuinplanten.webp',
+    description:
+      'Wij proberen het voor u als consument zo gemakkelijk  mogelijk te maken door de vaste planten onder te verdelen in verschillende segmenten. Zo zijn er vlinder en bijenlokkende planten en planten die graag in de volle zon staan.',
+  },
+  {
+    step: '03',
+    name: 'Bloembollen en zaden',
+    image: '/onze-planten/bloembollen.jpeg',
+    description:
+      'Bloembollen zijn onder te verdelen in voorjaarsbollen en zomerbollen. De voorjaarsbollen worden geplant in oktober / november en de zomerbollen in april / mei, na de vorstperiode.',
+  },
+];
+---
+
+<section
+  class="m-5 flex w-full max-w-2xl grid-cols-1 flex-col gap-x-10 gap-y-5 px-5 sm:px-10 sm:pt-20 lg:grid xl:max-w-[85vw] xl:grid-cols-3 2xl:max-w-[90rem]"
+>
+  <SliderPlanten client:load />
+  <article
+    class="col-span-full col-start-1 row-span-full row-start-2 flex flex-col space-y-5 sm:w-5/6 sm:space-y-1 md:col-span-2 md:col-start-2 md:row-start-1"
+  >
+    <h2 class="text-4xl font-medium tracking-tight sm:text-3xl lg:text-4xl">Onze planten</h2>
+    <p class="text-lg text-[#1D1D1F] dark:text-primary-200/80 sm:text-lg">
+      Planten (groen) is onze specialiteit en bij Tuincentrum van de Lagemaat in Ede staat kwaliteit
+      voorop! Planten van goede kwaliteit en de beste verzorging zorgt voor een prachtig assortiment
+      groen. In ons tuincentrum vindt u diverse soorten tuinplanten: van eenjarigen tot vaste
+      planten, van klimplanten tot fruitbomen en van rozen tot bloembollen. Ook zijn wij sterk in
+      kamerplanten: groene kamerbomen, bloeiende kamerplanten, cactussen en vetplanten én meer! Kom
+      langs in ons tuincentrum en laat u adviseren en informeren over welke plant(en) het beste bij
+      u past en hoe u deze gemakkelijk kunt verzorgen.
+    </p>
+  </article>
+</section>
+<section
+  class="mx-auto flex max-w-2xl flex-col gap-12 gap-x-5 gap-y-5 px-4 sm:gap-3 sm:px-6 lg:grid lg:grid-cols-3 lg:px-8 lg:xl:max-w-[85vw] 2xl:max-w-[90rem]"
+>
+  {
+    services.map((service) => (
+      <article class="relative flex flex-col rounded-3xl bg-primary-500/10 pb-7 text-sm dark:bg-primary-400/10">
+        <img
+          src={service.image}
+          alt={'Inspiratie afbeelding ' + service.name}
+          class="h-72 w-full object-cover"
+        />
+        <h3 class="mx-5 mt-5 flex flex-col text-xl font-medium">{service.name}</h3>
+        <p class="mx-5 text-base text-[#1D1D1F] dark:text-primary-200/80 sm:text-base">
+          {service.description}
+        </p>
+      </article>
+    ))
+  }
+  <section
+    class="text-gray-600 col-span-2 col-start-1 row-start-2 flex h-fit flex-col rounded-3xl bg-primary-500/10 p-10 text-sm dark:bg-primary-400/10 dark:text-white"
+  >
+    <h3 class="text-2xl font-medium">Veelgestelde Vragen</h3>
+    <p class="my-3 text-base">
+      Zijn er onbeantwoorde vragen die je niet in onze veelgestelde vragen vindt? Vraag het aan een
+      medewerker in ons tuincentrum. We staan altijd klaar om je verder te helpen.
+    </p>
+    <details class="dark:border-gray-700 w-fit rounded-lg border px-5 py-2 shadow-sm">
+      <summary class="text-gray-700 dark:text-gray-200 cursor-pointer text-lg">
+        Hoe kies ik de juiste potgrond voor mijn planten?
+      </summary>
+      <p class="text-base">
+        De juiste potgrond kiezen hangt af van het type plant. Universele potgrond is geschikt voor
+        de meeste planten, maar cactussen en succulenten vereisen bijvoorbeeld een grovere, goed
+        drainerende grond, terwijl orchideeën een luchtrijke grond nodig hebben. Sommige planten,
+        zoals azalea's, gedijen op zuurdere grond, en voor groenten en kruiden is er specifieke
+        moestuin- en kruidentuin potgrond. De kwaliteit van de aarde is ook belangrijk: het moet
+        voldoende voedingsstoffen bevatten en vrij zijn van ziektekiemen of onkruidzaden. U kunt ook
+        advies vragen aan een van onze medewerkers.
+      </p>
+    </details>
+
+    <details class="dark:border-gray-700 my-3 w-fit rounded-lg border px-5 py-2 shadow-sm">
+      <summary class="text-gray-700 dark:text-gray-200 cursor-pointer text-lg">
+        Hoeveel water moet ik mijn planten geven?
+      </summary>
+      <p class="text-base">
+        De hoeveelheid water die een plant nodig heeft, varieert op basis van het type plant, de
+        grootte, het seizoen en de groeiomstandigheden. Als algemene regel geldt echter dat de
+        meeste kamerplanten het best gedijen wanneer hun grond gelijkmatig vochtig is, maar niet
+        doorweekt. Het is belangrijk om overbewatering te voorkomen, omdat dit wortelrot kan
+        veroorzaken. Een goede regel is om de grond tussen de gietbeurten door bijna volledig te
+        laten uitdrogen. Steek je vinger ongeveer 2,5 cm in de grond – als het droog aanvoelt, is
+        het tijd om water te geven. Buitenplanten hebben doorgaans meer water nodig, vooral tijdens
+        droge of hete periodes.
+      </p>
+    </details>
+
+    <details class="dark:border-gray-700 w-fit rounded-lg border px-5 py-2 shadow-sm">
+      <summary class="text-gray-700 dark:text-gray-200 cursor-pointer text-lg">
+        Wat doe ik als mijn plant gele bladeren heeft?
+      </summary>
+      <p class="text-base">
+        Gele bladeren op uw planten kunnen wijzen op een aantal problemen: <br
+          aria-hidden="true"
+        />1. Overbewatering of onderbewatering: Beide kunnen gele bladeren veroorzaken. Zorg ervoor
+        dat u uw planten op de juiste manier water geeft. <br aria-hidden="true" />2. Onvoldoende
+        licht: Planten hebben voldoende licht nodig om te groeien. Als ze niet genoeg krijgen,
+        kunnen hun bladeren geel worden. <br aria-hidden="true" />3. Voedingsstoffentekort: Met name
+        een tekort aan stikstof kan gele bladeren veroorzaken. Overweeg het gebruik van een
+        uitgebalanceerde kunstmest. <br aria-hidden="true" />4. Ziekte of plagen: Verschillende
+        soorten ziekten of plagen kunnen gele bladeren veroorzaken. <br aria-hidden="true" />5.
+        Veroudering: Het is normaal dat bladeren geel worden en afvallen als ze oud worden. Als u
+        gele bladeren op uw planten opmerkt, is het belangrijk ze te onderzoeken om de oorzaak te
+        bepalen en dienovereenkomstig actie te ondernemen. Het kan nodig zijn om uw water-, licht-,
+        of voedingsregime te veranderen, of om een ziekte of plaag te behandelen.
+      </p>
+    </details>
+  </section>
+</section>

@@ -1,0 +1,48 @@
+---
+const services = [
+  {
+    step: '01',
+    name: 'Planten',
+    image: '/planten/plant-3.webp',
+    description:
+      'Onze planten zullen jouw huis opfleuren. Planten zorgen voor een gezellige sfeer in huis.',
+  },
+  {
+    step: '02',
+    name: 'Bloemen',
+    image: 'bloemen.webp',
+    description:
+      'Uit ons groot assortiment bloemen, vindt je de bloemen die bij jou passen. Onze bloemen zijn met de grootste zorg gekweekt.',
+  },
+  {
+    step: '03',
+    name: 'Sfeer',
+    image: 'woonaccessoires2.webp',
+    description:
+      'Naast kamerplanten en tuinplanten kunt u bij ons terecht voor de nieuwste en mooiste trends in sfeerartikelen en woonaccessoires voor binnen en buiten.',
+  },
+];
+---
+
+<section
+  class="mx-auto flex max-w-2xl flex-col gap-12 px-8 sm:gap-5 sm:px-6 md:py-16 lg:px-8 lg:xl:max-w-[85vw] 2xl:max-w-[90rem]"
+>
+  <h2 class="text-3xl font-medium tracking-tight sm:text-4xl lg:text-5xl">Ons tuincentrum</h2>
+  <section class="grid gap-x-5 gap-y-5 lg:grid-cols-3">
+    {
+      services.map((service) => (
+        <article class="relative flex flex-col rounded-3xl bg-primary-500/10 pb-7 text-sm dark:bg-primary-400/10">
+          <img
+            src={service.image}
+            alt={'Inspiratie afbeelding ' + service.name}
+            class="h-72 w-full object-cover"
+          />
+          <h3 class="mx-5 mt-5 flex flex-col text-xl font-medium">{service.name}</h3>
+          <p class="mx-5 text-base text-[#1D1D1F] dark:text-primary-200/80 sm:text-lg">
+            {service.description}
+          </p>
+        </article>
+      ))
+    }
+  </section>
+</section>

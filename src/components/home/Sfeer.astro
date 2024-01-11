@@ -1,0 +1,67 @@
+---
+import { imageConfig } from 'astro:assets';
+import SliderSfeer from '../SliderSfeer';
+const services = [
+  {
+    step: '01',
+    name: 'Kaarsen',
+    image: '/sfeer/kaars.webp',
+    description:
+      'In een gezellig huis of een sfeervolle tuin zullen kaarsen zelden ontbreken. Denkt u zich maar in, een romantisch diner of een goed gesprek zijn toch het best bij rustig flikkerend kaarslicht.  In ons tuincentrum kunt u terecht voor kaarsen in allerlei soorten en maten.',
+  },
+  {
+    step: '02',
+    name: 'Kussens',
+    image: '/sfeer/kussen.webp',
+    description:
+      'Is uw bank eigenlijk nog niet aan vervanging toe maar wilt u toch graag een kleine metamorfose? Met frisse nieuwe kussens geeft u een geheel nieuwe look aan uw meubels.',
+  },
+  {
+    step: '03',
+    name: 'Woonaccessoires',
+    image: '/sfeer/vaas.webp',
+    description:
+      'Het is altijd een feest om op de afdeling sfeer en cadeau rond te kijken. Bij ons vindt u een groot assortiment aan woonaccessoires. Denkt u aan potten, vazen en manden om  tuin en balkon gezellig te maken.',
+  },
+];
+---
+
+<section
+  class="m-5 flex w-full max-w-2xl grid-cols-1 flex-col gap-x-10 gap-y-5 px-5 sm:px-10 lg:grid xl:max-w-[85vw] xl:grid-cols-3 2xl:max-w-[90rem]"
+>
+  <SliderSfeer client:load />
+  <article
+    class="col-span-full col-start-1 row-span-full row-start-2 flex flex-col space-y-5 sm:w-5/6 sm:space-y-1 md:col-span-2 md:col-start-2 md:row-start-1"
+  >
+    <h2 class="text-4xl font-medium tracking-tight sm:text-3xl lg:text-4xl">Sfeer en cadeau</h2>
+    <p class="text-lg text-[#1D1D1F] dark:text-primary-200/80 sm:text-lg">
+      Naast kamerplanten en tuinplanten kunt u bij ons terecht voor de nieuwste en mooiste trends in
+      sfeerartikelen en woonaccessoires voor binnen en buiten. Prachtige vazen die zowel binnen als
+      buiten goed tot z'n recht komen of mooie zijde bloemen en planten om een moeilijke hoek in uw
+      huis op te vrolijken. Het glaswerk in diverse kleuren kunt u mooi combineren met planten en
+      bloemen. Hippe kussens en een groot assortiment aan kaarsen en sfeerverlichting om gezellige
+      hoekjes te creëren in uw tuin of woonkamer. Bij ons kunt u volop inspiratie opdoen en u blijft
+      op de hoogte van de nieuwste tuinideeën. Op onze sfeerafdeling kunt u voor iedere verjaardag
+      wel een leuk cadeau vinden.
+    </p>
+  </article>
+</section>
+<section
+  class="mx-auto flex max-w-2xl flex-col gap-12 gap-x-5 gap-y-5 px-4 sm:gap-3 sm:px-6 lg:grid lg:grid-cols-3 lg:px-8 lg:xl:max-w-[85vw] 2xl:max-w-[90rem]"
+>
+  {
+    services.map((service) => (
+      <article class="relative flex flex-col rounded-3xl bg-primary-500/10 pb-7 text-sm dark:bg-primary-400/10">
+        <img
+          src={service.image}
+          alt={'Inspiratie afbeelding ' + service.name}
+          class="h-72 w-full object-cover"
+        />
+        <h3 class="mx-5 mt-5 flex flex-col text-xl font-medium">{service.name}</h3>
+        <p class="mx-5 text-base text-[#1D1D1F] dark:text-primary-200/80 sm:text-base">
+          {service.description}
+        </p>
+      </article>
+    ))
+  }
+</section>

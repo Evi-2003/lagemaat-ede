@@ -1,0 +1,131 @@
+---
+import Slider from '../Slider';
+import Geopend from '../Geopend';
+import Map from '../Map';
+---
+
+<section
+  id="contact"
+  class="m-5 flex w-full max-w-2xl grid-cols-2 flex-col gap-y-5 px-5 sm:grid sm:px-10 sm:pt-20 md:grid-cols-3 lg:xl:max-w-[85vw] 2xl:max-w-[90rem]"
+>
+  <article class="col-span-2 col-start-1 space-y-3">
+    <h2 class="text-4xl font-medium tracking-tight sm:text-5xl lg:text-5xl">Contact</h2>
+    <ul class="flex text-sm sm:text-base">
+      <li class="flex items-center">
+        <a
+          href="email:info@lagemaat-ede.nl"
+          aria-label="Email: info@lagemaat-ede.nl"
+          class="flex items-center"
+          ><svg
+            width="1200pt"
+            height="1200pt"
+            version="1.1"
+            viewBox="0 0 1200 1200"
+            xmlns="http://www.w3.org/2000/svg"
+            class="mx-2 h-8 w-8 fill-primary-900 dark:fill-white"
+          >
+            <path
+              d="m297.71 380.84c-12.297 0-22.672 10.371-22.672 22.672v392.97c0 12.297 10.371 22.672 22.672 22.672h604.57c12.297 0 22.672-10.371 22.672-22.672v-392.97c0-12.301-10.371-22.672-22.672-22.672zm30.23 30.23h544.11l-272.06 251.51-272.06-251.51zm-22.672 19.836 174.52 161.54-174.52 174.52zm589.46 0v336.05l-174.52-174.52 174.52-161.54zm-392.73 181.84 87.852 81.477c2.7812 2.5234 6.3984 3.918 10.152 3.918 3.7578 0 7.375-1.3945 10.156-3.918l87.852-81.477 176.18 176.18h-548.36z"
+              style="stroke: currentColor; stroke-width: 20px;"></path>
+          </svg>
+           info@lagemaat-ede.nl</a
+        >
+      </li><li class="flex items-center">
+        <a href="tel:031861561" aria-label="Bellen: (0318) 615 615" class="flex items-center"
+          ><svg
+            width="1200pt"
+            height="1200pt"
+            version="1.1"
+            viewBox="0 0 1200 1200"
+            xmlns="http://www.w3.org/2000/svg"
+            class="mx-2 h-5 w-5 fill-primary-900 dark:fill-white"
+          >
+            <path
+              style="stroke: currentColor; stroke-width: 50px;"
+              d="m884.8 1104h-0.035156c-194.76-0.011719-415.67-199.48-501.6-285.23-94.008-93.805-309.97-333.8-285.21-535.96 9.3125-75.996 51.539-137.05 125.52-181.48 5.9531-3.5742 12.758-5.3867 20.219-5.3867 58.188 0 172.95 135.83 219.39 201.6 66.395 94.02 56.988 120.55 53.449 130.54-11.258 31.727-32.195 50.23-50.664 66.539-16.164 14.281-30.121 26.605-37.234 46.656-0.98438 4.8711 5.4727 31.176 47.641 83.004 66.266 81.445 153.57 147.02 181.69 147.02 20.746-7.1055 33.098-21.059 47.363-37.223 16.32-18.469 34.812-39.395 66.551-50.664 4.4648-1.5859 9.4062-2.3867 14.688-2.3867 66.898 0 260.43 158.71 305.84 238.88 4.8125 8.5078 19.477 34.402 6.2031 56.543-50.723 84.637-122.67 127.54-213.81 127.54zm-639.45-959.79c-59.711 36.684-92.352 83.965-99.758 144.43-15.395 125.68 86.09 311.16 271.46 496.14 81.719 81.539 290.86 271.2 467.72 271.21h0.023438c73.164 0 129.13-33.203 170.99-101.47-7.9219-47.438-218.58-224.71-268.89-225.48-19.414 7.2227-31.57 20.965-45.59 36.828-16.332 18.48-34.836 39.422-66.59 50.688-5.1367 1.8242-10.766 2.7461-16.754 2.7461-63.59 0-184.93-114.36-240.54-193.11-31.297-44.305-42.434-77.328-34.031-100.98 11.258-31.754 32.207-50.258 50.676-66.574 15.887-14.027 29.641-26.195 36.852-45.648 0.26562-17.293-38.879-86.641-111.96-169.5-60.004-68.047-100.29-96.285-113.61-99.285z"
+            ></path>
+          </svg>
+           (0318) 615 615</a
+        >
+      </li>
+    </ul>
+    <p class="text-lg text-[#1D1D1F] dark:text-primary-100 sm:col-start-1 sm:w-4/5 sm:text-lg">
+      Wilt u iemand wat cadeau doen, maar weet u niet goed wat? Wij hebben cadeaubonnen! Ook
+      beschikken wij over een bezorgdienst (in Ede). Ruilen (of tegoedbon) kan binnen tien dagen na
+      aankoop op vertoon van uw kassabon. Met uitzondering van bloemen en planten.
+    </p>
+    <section class="flex flex-col sm:flex-row">
+      <article class="contents flex-col rounded-lg border px-5 py-2 sm:flex">
+        <h3 class="text-xl font-normal">Openingstijden</h3>
+        <table class="flex w-fit rounded-lg text-base">
+          <tr class="border-b-[1px]">
+            <th class="pb-2 text-left font-medium">Dag</th>
+            <th class="pb-2 font-medium">Openingstijden</th>
+          </tr>
+          <tr>
+            <td class="pr-20 pt-3">Maandag</td>
+            <td class="pt-3">10:00 - 17:30</td>
+          </tr>
+          <tr>
+            <td>Dinsdag</td>
+            <td>09:00 - 17:30</td>
+          </tr>
+          <tr>
+            <td>Woensdag</td>
+            <td>09:00 - 17:30</td>
+          </tr>
+          <tr>
+            <td>Donderdag</td>
+            <td>09:00 - 17:30</td>
+          </tr>
+          <tr>
+            <td>Vrijdag</td>
+            <td>09:00 - 17:30</td>
+          </tr>
+          <tr>
+            <td>Zaterdag</td>
+            <td>09:00 - 17:00</td>
+          </tr>
+          <tr>
+            <td>Zondag</td>
+            <td>Gesloten</td>
+          </tr>
+        </table>
+      </article>
+      <article class="mx-5 contents flex-col rounded-lg border px-5 py-2 sm:flex">
+        <h3 class="text-xl font-normal">Feestdagen</h3>
+        <table class="flex w-fit rounded-lg text-base">
+          <tr class="border-b-[1px]">
+            <th class="pb-2 text-left font-medium">Dag</th>
+            <th class="pb-2 font-medium">Openingstijden</th>
+          </tr>
+          <tr>
+            <td class="pr-20 pt-3">1 januari</td>
+            <td class="pt-3">Gesloten</td>
+          </tr>
+          <tr>
+            <td>2de Paasdag</td>
+            <td>10:00 - 17:00</td>
+          </tr>
+          <tr>
+            <td>2de Pinksterdag</td>
+            <td>10:00 - 17:00</td>
+          </tr>
+          <tr>
+            <td>Hemelvaartsdag</td>
+            <td>10:00 - 17:00</td>
+          </tr>
+          <tr>
+            <td>Koningsdag</td>
+            <td>10:00 - 17:00</td>
+          </tr>
+          <tr>
+            <td>2de kerstdag</td>
+            <td>Gesloten</td>
+          </tr>
+        </table>
+      </article>
+    </section>
+  </article>
+  <Map client:visible />
+</section>

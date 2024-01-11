@@ -1,0 +1,65 @@
+---
+import { imageConfig } from 'astro:assets';
+import SliderBloemen from '../SliderBloemen.jsx';
+const services = [
+  {
+    step: '01',
+    name: 'Snijbloemen',
+    image: '/bloemen/snijbloemen.webp',
+    description:
+      'Onze bloemenshop wordt dagelijks aangevuld met verse bloemen. Op uw verzoek kunt u zelf een boeket samenstellen, maar vaak zorgen een paar takken groen in een enkele bos bloemen al voor een mooi effect.',
+  },
+  {
+    step: '02',
+    name: 'Boeketten',
+    image: '/bloemen/boeketten.webp',
+    description:
+      'Iedere dag maken onze bloembindsters verse boeketten passend bij het jaargetijde. Natuurlijk maken wij ook boeketten naar uw wensen en een door u gegeven prijsindicatie. Wij bezorgen wij ook in de regio.',
+  },
+  {
+    step: '03',
+    name: 'Rouwarrangementen',
+    image: '/bloemen/rouwarrangementen.webp',
+    description:
+      'Wij maken rouwarrangementen naar uw wensen en kleuren. Maak een afspraak of kom langs dan zorgen wij  voor een mooi en stijlvol boeket of arrangement, met of zonder lint in de kleur die u passend vindt.',
+  },
+];
+---
+
+<section
+  class="m-5 flex w-full max-w-2xl grid-cols-1 flex-col gap-x-10 gap-y-5 px-5 sm:px-10 sm:pt-20 lg:grid xl:max-w-[85vw] xl:grid-cols-3 2xl:max-w-[90rem]"
+  id="onze-bloemen"
+>
+  <SliderBloemen client:load />
+  <article
+    class="col-span-full col-start-1 row-span-full row-start-2 flex flex-col space-y-5 sm:w-5/6 sm:space-y-1 md:col-span-2 md:col-start-1 md:row-start-1"
+  >
+    <h2 class="text-4xl font-medium tracking-tight sm:text-3xl lg:text-4xl">Onze bloemen</h2>
+    <p class="text-lg text-[#1D1D1F] dark:text-primary-200/80 sm:text-lg">
+      In tuincentrum van de Lagemaat in Ede vindt u een zeer vakkundige bloemist. Voor snijbloemen,
+      een opgemaakt boeket, de mooiste rouwboeketten, en meer! Wij maken alles naar uw wensen. Stel
+      een eigen boeket samen of kies voor een van onze opgemaakte boeketten, bloemstukjes en andere
+      arrangementen. Een ruim assortiment vazen, potten en manden maken het geheel af. Wij bezorgen
+      ook thuis in Ede.
+    </p>
+  </article>
+</section>
+<section
+  class="mx-auto flex max-w-2xl flex-col gap-12 gap-x-5 gap-y-5 px-4 sm:gap-3 sm:px-6 lg:grid lg:grid-cols-3 lg:px-8 lg:xl:max-w-[85vw] 2xl:max-w-[90rem]"
+>
+  {
+    services.map((service) => (
+      <article class="relative flex flex-col rounded-3xl bg-primary-500/10 pb-7 text-sm dark:bg-primary-400/10">
+        <img
+          src={service.image}
+          alt={'Inspiratie afbeelding ' + service.name}
+          class="h-72 w-full object-cover"
+        />
+        <h3 class="mx-5 mt-5 flex flex-col text-xl font-medium">{service.name}</h3>
+        <p class="mx-5 text-base text-[#1D1D1F] dark:text-primary-200/80 sm:text-base">
+          {service.description}
+        </p>
+      </article>
+    ))
+  }
+</section>

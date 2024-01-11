@@ -1,0 +1,44 @@
+---
+import Slider from '../Slider';
+import Geopend from '../Geopend';
+---
+
+<section
+  class="m-5 flex w-full max-w-2xl grid-cols-2 flex-col gap-y-5 px-5 sm:grid sm:px-10 sm:pt-20 md:grid-cols-2 lg:xl:max-w-[85vw] 2xl:max-w-[90rem]"
+>
+  <Slider client:load />
+  <article
+    class="col-span-full col-start-1 row-span-full row-start-2 flex flex-col space-y-5 sm:w-5/6 md:col-span-1 md:row-start-1"
+  >
+    <h1
+      class="text-4xl font-medium tracking-tight text-[#1D1D1F] dark:text-white sm:text-5xl lg:text-6xl"
+    >
+      Tuincentrum van de Lagemaat
+    </h1>
+    <p class="text-lg text-[#1D1D1F] dark:text-primary-200/80 sm:text-xl">
+      De mooiste bloemen, planten en opgemaakt arrangementen die u gemakkelijk als cadeau kunt
+      geven. Wij hebben ook cadeaubonnen en beschikken over een bezorgdienst (in Ede). Wij kunnen
+      alles bezorgen; van bloemen tot gevulde plantenbakken.
+    </p>
+    <a
+      href="https://maps.app.goo.gl/LyMb2nqo7fLXoEHEA"
+      target="_blank"
+      aria-label="Routebeschrijving naar Schaapsweg 78, 6712 CG Ede"
+      class="inline-flex w-fit items-center justify-center gap-x-3 rounded-full border border-transparent bg-[#166534] px-7 py-3 text-base font-medium text-white transition hover:scale-95 hover:bg-[#14532d] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 dark:hover:bg-[#052e16] dark:focus-visible:outline-primary-400"
+    >
+      <svg
+        class="h-6 w-6 fill-white"
+        width="1200pt"
+        height="1200pt"
+        version="1.1"
+        viewBox="0 0 1200 1200"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="m662.4 1161.6c-4.8008 0-8.3984 0-13.199-1.1992-49.199-4.8008-86.398-39.602-94.801-87.602l-68.398-356.4c0-2.3984-2.3984-3.6016-3.6016-3.6016l-356.4-68.398c-48-9.6016-82.801-46.801-87.602-94.801-4.8008-49.199 20.398-92.398 64.801-112.8l900-390c43.199-19.199 92.398-9.6016 126 24 33.602 33.602 42 82.801 24 126l-390 900c-19.199 40.801-56.398 64.801-100.8 64.801zm-13.199-106.8c1.1992 6 4.8008 9.6016 12 10.801 6 1.1992 10.801-2.3984 13.199-8.3984l390-900c2.3984-7.1992 1.1992-14.398-3.6016-19.199-4.8008-4.8008-13.199-7.1992-19.199-3.6016l-900 390c-6 2.3984-8.3984 7.1992-8.3984 13.199 1.1992 6 4.8008 10.801 10.801 12l356.4 68.398c40.801 8.3984 72 39.602 80.398 80.398z"
+        ></path>
+      </svg> Schaapsweg 78, 6712 CG Ede
+    </a>
+    <Geopend client:load />
+  </article>
+</section>
