@@ -19,7 +19,7 @@
     "@types/react-dom": "^18.2.18",
     "alpinejs": "3.12.3",
     "astro": "2.10.13",
-    "astro-compress": "2.0.14",
+    "astro-compress": "^2.2.21",
     "keen-slider": "^6.8.6",
     "moment": "^2.30.1",
     "prettier": "3.0.2",
